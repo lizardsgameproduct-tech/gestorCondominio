@@ -43,8 +43,8 @@ app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024  # 10 MB
 _origins = os.environ.get('CORS_ORIGINS', '*')
 CORS(app, origins=_origins.split(',') if _origins != '*' else '*')
 
-SUPABASE_URL      = (os.environ.get('SUPABASE_URL') or '').rstrip('/')
-SUPABASE_ANON_KEY = os.environ.get('SUPABASE_ANON_KEY') or ''
+SUPABASE_URL      = (os.environ.get('https://scjiztniwqmdpzjppigm.supabase.co') or '').rstrip('/')
+SUPABASE_ANON_KEY = os.environ.get('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNjaml6dG5pd3FtZHB6anBwaWdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwMTA4NDYsImV4cCI6MjA5ODU4Njg0Nn0.kXIi6iBxyJ7YVI9LjUHGU9Zjct9MtnNwtQMgJJ94cVM') or ''
 AUTH_ATIVO        = bool(SUPABASE_URL and SUPABASE_ANON_KEY)
 
 if not AUTH_ATIVO:
